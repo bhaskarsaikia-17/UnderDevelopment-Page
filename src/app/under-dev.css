@@ -1,0 +1,91 @@
+/* Custom Font */
+@font-face {
+  font-family: 'Neighbor';
+  src: url('/Hundredligattureregular-7BXZA.otf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Entrance animation for the card */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce-slow {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Glass Card Styles */
+.glass-card {
+  animation: fade-in-up 0.8s ease-out forwards;
+  transition: all 0.5s ease-out;
+}
+
+.glass-card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 25px 50px -12px rgba(0, 220, 220, 0.25);
+}
+
+/* Text animations */
+.fade-in-text {
+  animation: fade-in 1s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.fade-in-text-delayed {
+  animation: fade-in 1s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+/* Icon bounce animation */
+.bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+/* Pulsing dots animation */
+.pulse-dot {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
