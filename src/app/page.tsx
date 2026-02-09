@@ -1,4 +1,5 @@
 import "./under-dev.css";
+import { TypingAnimation } from "@/components/ui/typing-animation";
 
 export default function Home() {
   return (
@@ -6,7 +7,7 @@ export default function Home() {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
-        style={{ backgroundImage: "url('/underdevelopment.jpeg')" }}
+        style={{ backgroundImage: "url('/background.jpg')" }}
       />
 
       {/* Dark Overlay with subtle gradient */}
@@ -19,12 +20,16 @@ export default function Home() {
           className="fade-in-text mb-4 text-5xl font-bold text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)] md:text-7xl"
           style={{ fontFamily: "'Neighbor', sans-serif" }}
         >
-          Under Development
+          MANIFESTING GREATNESS
         </h1>
 
-        {/* Subtitle */}
-        <p className="fade-in-text-delayed text-xl text-white/80 drop-shadow-lg md:text-2xl">
-          Something crazy brewing.....
+        {/* Subtitle with Typing Animation */}
+        <p className="text-xl text-white/80 drop-shadow-lg md:text-2xl italic">
+          <TypingAnimation
+            text="The universe said wait for it..."
+            duration={80}
+            delay={1000}
+          />
         </p>
 
         {/* Animated progress dots */}
@@ -36,9 +41,14 @@ export default function Home() {
       </div>
 
       {/* Watermark */}
-      <div className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-sm text-white/40 hover:text-white/70 transition-colors duration-300">
+      <a
+        href="https://droplight.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-sm text-white/40 hover:text-white/70 transition-colors duration-300"
+      >
         Droplight.in
-      </div>
+      </a>
     </div>
   );
 }
